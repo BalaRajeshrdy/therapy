@@ -111,7 +111,7 @@ Accessibility: semantic landmarks, skip link, labelled form fields with announce
 ## Deploying to Vercel
 
 1. In Vercel, choose **Add New → Project** and import `BalaRajeshrdy/therapy`.
-2. Leave the detected settings as they are (Framework: Vite, Build: `npm run build`, Output: `dist`). `vercel.json` already sets these.
+2. Leave the detected settings as they are (Framework Preset: **Vite**, Build Command: `npm run build`, Output Directory: `dist`, Install Command: `npm install`).
 3. Click **Deploy**. No environment variables are needed — the demo has no backend.
 
-`vercel.json` rewrites every route to `index.html`, so links such as `/studio/billing` or `/booking` load correctly when opened directly or refreshed.
+`vercel.json` contains one rewrite that sends every route to `index.html` (built files such as `/assets/*` are served first), so links such as `/studio/billing` or `/booking` load correctly when opened directly or refreshed.
