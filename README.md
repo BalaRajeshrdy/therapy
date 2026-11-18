@@ -107,3 +107,11 @@ tests/         Playwright specs
 React 18, TypeScript, Vite, Tailwind CSS, React Router, shadcn/ui-style components on Radix primitives, Lucide icons, Framer Motion, date-fns, Playwright.
 
 Accessibility: semantic landmarks, skip link, labelled form fields with announced errors, keyboard-navigable calendar (arrow keys, Home/End, PageUp/PageDown), visible focus rings and reduced-motion support.
+
+## Deploying to Vercel
+
+1. In Vercel, choose **Add New → Project** and import `BalaRajeshrdy/therapy`.
+2. Leave the detected settings as they are (Framework: Vite, Build: `npm run build`, Output: `dist`). `vercel.json` already sets these.
+3. Click **Deploy**. No environment variables are needed — the demo has no backend.
+
+`vercel.json` rewrites every route to `index.html`, so links such as `/studio/billing` or `/booking` load correctly when opened directly or refreshed.
